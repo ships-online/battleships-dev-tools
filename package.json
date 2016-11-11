@@ -1,0 +1,15 @@
+{
+  "name": "battle-ship-dev-tools",
+  "version": "0.0.1",
+  "description": "The dev tools for Battleships game.",
+  "scripts": {
+    "lint": "./node_modules/.bin/gulp lint"
+  },
+  "keywords": [
+    "battleships",
+    "game"
+  ],
+  "author": "Oskar Wróbel <kontakt@oskarwrobel.pl>",
+  "license": "ISC",
+  "devDependencies": {}
+}
