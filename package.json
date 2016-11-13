@@ -18,6 +18,7 @@
     "babel-plugin-istanbul": "^2.0.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
     "chai": "^3.5.0",
+    "del": "^2.2.2",
     "git-guppy": "^1.2.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
@@ -36,6 +37,7 @@
     "karma-webpack": "^1.8.0",
     "minimist": "^1.2.0",
     "mocha": "^3.0.2",
+    "shelljs": "^0.7.5",
     "sinon": "^1.17.5",
     "webpack": "^1.13.2"
   }
