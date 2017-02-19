@@ -9,6 +9,10 @@
     "battleships",
     "game"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ships-online/battleships-dev-tools.git"
+  },
   "author": "Oskar Wróbel <kontakt@oskarwrobel.pl>",
   "license": "ISC",
   "dependencies": {
