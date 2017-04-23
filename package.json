@@ -22,6 +22,7 @@
     "babel-plugin-istanbul": "^4.0.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
     "chai": "^3.5.0",
+    "css-loader": "^0.28.0",
     "del": "^2.2.2",
     "git-guppy": "^2.0.0",
     "gulp": "^3.9.1",
@@ -49,6 +50,7 @@
     "sass-loader": "^6.0.3",
     "shelljs": "^0.7.5",
     "sinon": "^1.17.7",
+    "style-loader": "^0.16.1",
     "webpack": "^2.4.1"
   }
 }
