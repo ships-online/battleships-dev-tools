@@ -24,6 +24,7 @@
     "chai": "^3.5.0",
     "css-loader": "^0.28.0",
     "del": "^2.2.2",
+    "file-loader": "^0.11.1",
     "git-guppy": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
