@@ -48,7 +48,7 @@
     "minimist": "^1.2.0",
     "mocha": "^3.4.2",
     "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.3",
+    "sass-loader": "^6.0.6",
     "shelljs": "^0.7.5",
     "sinon": "^2.3.5",
     "style-loader": "^0.16.1",
