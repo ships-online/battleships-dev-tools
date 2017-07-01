@@ -49,9 +49,10 @@
     "mocha": "^3.4.2",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
-    "shelljs": "^0.7.5",
     "sinon": "^2.3.5",
     "style-loader": "^0.16.1",
-    "webpack": "^2.4.1"
+    "webpack": "^2.4.1",
+    "istanbul": "^0.4.5",
+    "shelljs": "^0.7.8"
   }
 }
