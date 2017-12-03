@@ -46,4 +46,7 @@ gulp.src( path.join( src, '**', '*.js' ), { base: src } )
 	.pipe( gulpReplace( ` from '${ ckePrefix }`, ` from '${ relative }${ ckePrefix }` ) )
 	.pipe( gulpBabel( { plugins: [ 'babel-plugin-transform-es2015-modules-commonjs' ] } ) )
 	.pipe( gulpPrint() )
-	.pipe( gulp.dest( dest ) );
+	.pipe( gulp.dest( dest ) )
+	.on( 'error', err => {
+		console.log( err );
+	} );
