@@ -64,5 +64,10 @@
     "**/*.js": [
       "eslint --quiet"
     ]
+  },
+  "bin": {
+    "battleships-test": "./bin/test.js",
+    "battleships-compile": "./bin/compile.js",
+    "battleships-build": "./bin/build.js"
   }
 }
