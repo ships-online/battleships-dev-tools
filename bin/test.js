@@ -27,7 +27,7 @@ if ( typeof testOptions.files === 'string' ) {
 }
 
 // Merge test options with global options.
-const options = Object.assign( testOptions, parseArguments( process.argv.slice( 2 ) ) );
+const options = Object.assign( parseArguments( process.argv.slice( 2 ) ), testOptions );
 
 // Create Karma server.
 const server = new KarmaServer( getKarmaConfig( options ), exitCode => {
