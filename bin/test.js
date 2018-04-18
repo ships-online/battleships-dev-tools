@@ -3,8 +3,8 @@
 'use strict';
 
 const KarmaServer = require( 'karma' ).Server;
-const getKarmaConfig = require( '../lib/utils/karma.conf' );
-const parseArguments = require( '../lib/utils/parsearguments' );
+const getKarmaConfig = require( '../lib/utils/karma.conf.js' );
+const parseArguments = require( '../lib/utils/parsearguments.js' );
 const minimist = require( 'minimist' );
 
 // Parse test options.
@@ -13,8 +13,13 @@ const testOptions = minimist( process.argv.slice( 2 ), {
 		'files'
 	],
 
+	boolean: [
+		'coverage'
+	],
+
 	alias: {
-		f: 'files'
+		f: 'files',
+		c: 'coverage'
 	},
 
 	default: {
