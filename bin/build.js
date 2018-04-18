@@ -3,9 +3,9 @@
 'use strict';
 
 const webpack = require( 'webpack' );
-const getWebpackConfig = require( '../lib/utils/webpack.conf.js' );
-const parseArguments = require( '../lib/utils/parsearguments' );
 const minimist = require( 'minimist' );
+const getWebpackConfig = require( '../lib/utils/webpack.conf.js' );
+const parseArguments = require( '../lib/utils/parsearguments.js' );
 
 // Parse build options.
 const buildOptions = minimist( process.argv.slice( 2 ), {
@@ -15,8 +15,8 @@ const buildOptions = minimist( process.argv.slice( 2 ), {
 	],
 
 	alias: {
-		i: 'in',
-		o: 'out'
+		i: 'input',
+		o: 'output'
 	}
 } );
 

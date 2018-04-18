@@ -7,8 +7,8 @@ const gulp = require( 'gulp' );
 const gulpPrint = require( 'gulp-print' );
 const gulpReplace = require( 'gulp-replace' );
 const gulpBabel = require( 'gulp-babel' );
-const parseArguments = require( '../lib/utils/parsearguments' );
 const minimist = require( 'minimist' );
+const parseArguments = require( '../lib/utils/parsearguments.js' );
 
 // Parse compile options.
 const compileOptions = minimist( process.argv.slice( 2 ), {
