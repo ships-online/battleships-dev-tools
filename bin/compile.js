@@ -8,10 +8,9 @@ const gulpPrint = require( 'gulp-print' );
 const gulpReplace = require( 'gulp-replace' );
 const gulpBabel = require( 'gulp-babel' );
 const minimist = require( 'minimist' );
-const parseArguments = require( '../lib/utils/parsearguments.js' );
 
 // Parse compile options.
-const compileOptions = minimist( process.argv.slice( 2 ), {
+const options = minimist( process.argv.slice( 2 ), {
 	string: [
 		'src',
 		'dest',
@@ -20,23 +19,20 @@ const compileOptions = minimist( process.argv.slice( 2 ), {
 	]
 } );
 
-if ( !compileOptions.src ) {
+if ( !options.src ) {
 	throw new Error( 'Missing source directory.' );
 }
 
-if ( !compileOptions.dest ) {
+if ( !options.dest ) {
 	throw new Error( 'Missing destination directory.' );
 }
 
-if ( compileOptions.format !== 'cjs' ) {
+if ( options.format !== 'cjs' ) {
 	throw new Error( 'Unsupported format.' );
 }
 
-// Merge compile options with global options.
-const options = Object.assign( compileOptions, parseArguments( process.argv.slice( 2 ) ) );
-
-const src = path.join( process.cwd(), compileOptions.src );
-const dest = path.join( process.cwd(), compileOptions.dest );
+const src = path.join( process.cwd(), options.src );
+const dest = path.join( process.cwd(), options.dest );
 const relative = options.relative || '';
 const ckePrefix = '@ckeditor/ckeditor5-';
 const battleshipsPrefix = 'battleships-';

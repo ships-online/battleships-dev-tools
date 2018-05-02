@@ -4,35 +4,38 @@
 
 const KarmaServer = require( 'karma' ).Server;
 const getKarmaConfig = require( '../lib/utils/karma.conf.js' );
-const parseArguments = require( '../lib/utils/parsearguments.js' );
 const minimist = require( 'minimist' );
 
 // Parse test options.
-const testOptions = minimist( process.argv.slice( 2 ), {
+const options = minimist( process.argv.slice( 2 ), {
 	string: [
 		'files'
 	],
 
 	boolean: [
-		'coverage'
+		'coverage',
+		'watch',
+		'source-map'
 	],
 
 	alias: {
 		f: 'files',
-		c: 'coverage'
+		c: 'coverage',
+		w: 'watch',
+		s: 'source-map'
 	},
 
 	default: {
-		files: [ 'tests/' ]
+		files: [ 'tests/' ],
+		watch: false,
+		coverage: false,
+		'source-map': false
 	}
 } );
 
-if ( typeof testOptions.files === 'string' ) {
-	testOptions.files = testOptions.files.split( ',' );
+if ( typeof options.files === 'string' ) {
+	options.files = options.files.split( ',' );
 }
-
-// Merge test options with global options.
-const options = Object.assign( parseArguments( process.argv.slice( 2 ) ), testOptions );
 
 // Create Karma server.
 const server = new KarmaServer( getKarmaConfig( options ), exitCode => {
