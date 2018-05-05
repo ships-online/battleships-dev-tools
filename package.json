@@ -55,7 +55,6 @@
     ]
   },
   "bin": {
-    "battleships-test": "./bin/test.js",
-    "battleships-compile": "./bin/compile.js"
+    "battleships-test": "./bin/test.js"
   }
 }
