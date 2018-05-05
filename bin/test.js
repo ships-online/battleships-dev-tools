@@ -2,9 +2,8 @@
 
 'use strict';
 
-const KarmaServer = require( 'karma' ).Server;
-const getKarmaConfig = require( '../lib/utils/karma.conf.js' );
 const minimist = require( 'minimist' );
+const test = require( '../lib/tasks/test.js' );
 
 // Parse test options.
 const options = minimist( process.argv.slice( 2 ), {
@@ -33,16 +32,4 @@ const options = minimist( process.argv.slice( 2 ), {
 	}
 } );
 
-if ( typeof options.files === 'string' ) {
-	options.files = options.files.split( ',' );
-}
-
-// Create Karma server.
-const server = new KarmaServer( getKarmaConfig( options ), exitCode => {
-	if ( exitCode !== 0 ) {
-		process.exit( exitCode );
-	}
-} );
-
-// And go :)
-server.start();
+test( options );
