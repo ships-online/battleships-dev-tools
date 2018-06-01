@@ -8,7 +8,8 @@ const test = require( '../lib/tasks/test.js' );
 // Parse test options.
 const options = minimist( process.argv.slice( 2 ), {
 	string: [
-		'files'
+		'files',
+		'config'
 	],
 
 	boolean: [
