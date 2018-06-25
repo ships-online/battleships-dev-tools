@@ -14,19 +14,22 @@ const options = minimist( process.argv.slice( 2 ), {
 
 	boolean: [
 		'coverage',
-		'watch'
+		'watch',
+		'sourceMap'
 	],
 
 	alias: {
 		f: 'files',
 		c: 'coverage',
-		w: 'watch'
+		w: 'watch',
+		s: 'sourceMap'
 	},
 
 	default: {
 		files: [ 'tests/' ],
 		watch: false,
-		coverage: false
+		coverage: false,
+		'sourceMap': false
 	}
 } );
 
