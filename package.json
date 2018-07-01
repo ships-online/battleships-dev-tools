@@ -26,7 +26,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-print": "^2.0.1",
-    "gulp-replace": "^0.5.4",
+    "gulp-replace": "^1.0.0",
     "istanbul": "^0.4.5",
     "istanbul-instrumenter-loader": "^3.0.0",
     "karma": "^1.7.0",
